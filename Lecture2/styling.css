@@ -1,0 +1,30 @@
+body {
+    font-family: charter,georgia,serif;
+    font-size: clamp(106%,2.1vw,135%)/1.4;
+    /* Change this color here (in format R, G, B) to change the styling of your links! */
+    --color: 247, 165, 165;
+}
+
+nav, header, main, article {
+    margin: 4rem auto;
+    max-width: 60ch;
+}
+
+/* This is how links with the "link" class are styled! */
+a.link {
+    color: unset;
+    text-decoration: none;
+    border-bottom: 0.3ch solid rgb(var(--color));
+    transition: 0.2s;
+    padding: 5px;
+}
+
+a.link:hover {
+    background: rgba(var(--color), 0.15);
+}
+
+/* This gets rid of the default styling for links, since then everything would be underlined. */
+a {
+    color: unset;
+    text-decoration: none;
+}

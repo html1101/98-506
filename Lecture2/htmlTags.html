@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <!-- Here are a list of helpful HTML tags! -->
+
+        <h1>An extra large header: h1</h1>
+        <h2>A large header: h2</h2>
+        <h3>A normal header: h3</h3>
+        <h4>A medium header: h4</h4>
+        <h5>A small header: h5</h5>
+        <h6>An extra small header: h6</h6>
+
+        <p>A paragraph (p)</p>
+
+        <ol>
+            <li>Item 1 of an ordered list (ol).</li>
+            <li>Item 2 of an ordered list.</li>
+        </ol>
+
+        <ul>
+            <li>Item 1 of an unordered list (ul).</li>
+            <li>Item 2 of an unordered list.</li>
+        </ul>
+
+        <!-- Different types of inputs: -->
+        <!-- Most important ones: -->
+        button: <input type="button" value="Button"> <br/>
+        text: <input type="text"> <br/>
+        password: <input type="password"> <br/>
+        checkbox: <input type="checkbox"> <br/>
+        color: <input type="color"> <br/>
+        date: <input type="date"> <br/>
+        number: <input type="number"> <br/>
+        radio: <input type="radio"> <br/>
+        <!-- Less commonly used ones: -->
+        datetime: <input type="datetime-local"> <br/>
+        email: <input type="email"> <br/>
+        file: <input type="file"> <br/>
+        hidden: <input type="hidden"> <br/>
+        image: <input type="image"> <br/>
+        month: <input type="month"> <br/>
+        range: <input type="range"> <br/>
+        reset: <input type="reset"> <br/>
+        search: <input type="search"> <br/>
+        submit: <input type="submit"> <br/>
+        tel: <input type="tel"> <br/>
+        time: <input type="time"> <br/>
+        url: <input type="url"> <br/>
+        week: <input type="week"> <br/>
+
+        <!-- A "horizontal rule": this draws a horizontal line to break up content. -->
+        <hr />
+
+
+        <!-- How to use the radio input:
+         Note here the "name" attribute. This is what lets us link these two radio buttons
+         as being part of the same option.
+
+         The "for" attribute in the <label> associates the label with the radio button it corresponds to.
+         This is not strictly necessary (it'll work just fine wo the label), but highly recommended
+         for accessibility purposes.
+        -->
+        <input type="radio" name="name" id="radio1"/>
+        <label for="radio1">This is a radio button!</label>
+        <br />
+        <!-- The "checked" attribute (with no value) means this radio button is checked by default. -->
+        <input type="radio" name="name" id="radio2" checked/>
+        <label for="radio2">This is a radio button!</label>
+
+    </body>
+</html>
