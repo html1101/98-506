@@ -18,6 +18,9 @@ function add(num1, num2) {
     return sum
 }
 
+// I can also use the arrow syntax
+const subtract = (num1, num2) => num1 - num2
+
 // Variables are scoped to the closest block, or closest set of {}
 // I can access sum inside of the add function
 console.log(sum) // But this fails!
@@ -33,10 +36,14 @@ const bool = false
 
 // There are also some non-primitive variable types:
 const arr = [1, 2, 3] // Arrays are like lists from python or vectors from C++
+console.log(arr[2]) // 3
+
 const obj = {
     width: 10,
     height: 10
 } // Objects in JavaScript don't necessarily need a class to make them!
+console.log(obj.width)
+console.log(obj["width"])
 
 // We can use basic control flow: if, for, while, etc
 if (x > y) {
@@ -44,8 +51,6 @@ if (x > y) {
 } else {
     console.log("x is not bigger...")
 }
-
-
 
 for (let i = 0; i < x; i++) {
     console.log("Hello!") // Prints "Hello!" 3 times
