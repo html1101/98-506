@@ -36,7 +36,9 @@ const addElement = (todoName) => {
     return newTodo;
 }
 
-const addTodo = (name) => {
+const addTodo = () => {
+    const name = document.getElementById("todo-name").value;
+
     // Add an element to our todo list
     const elem = addElement(name);
 
@@ -50,9 +52,11 @@ const addTodo = (name) => {
 
 // Listen for when we press add-elem to add to our todo list:
 document.getElementById("add-elem").addEventListener("click", () => {
-    // Get todo-name's content
-    const todoName = document.getElementById("todo-name").value;
-
     // Add it to the todo list!
-    addTodo(todoName);
+    addTodo();
+});
+document.getElementById("todo-name").addEventListener("keydown", (evt) => {
+    if(evt.key == "Enter") {
+        addTodo();
+    }
 });
