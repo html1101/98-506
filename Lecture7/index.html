@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Browser Globals Demo</title>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Browser Globals Showcase</h1>
+    <section>
+      <h2>Alert Demonstrations</h2>
+      <p>These 3 buttons will run the <code>alert</code> function using 3 different ways to access it</p>
+      <button id="global-this-button"><code>globalThis</code></button>
+      <button id="window-button"><code>window</code></button>
+      <button id="no-object-button">No explicit object</button>
+    </section>
+
+    <section>
+      <h2>Tab/Window/Screen Utilities</h2>
+      <p>Inner height: <span id="inner-height">N/A</span></p>
+      <p>Screen X position: <span id="screen-x">N/A</span></p>
+      <button id="update-screen-x">Update <code>screenX</code></button>
+      <button id="new-window">Open new window (window.open)</button>
+      <button id="scroll-1000">Scroll to 1000px down (scrollTo)</button>
+      <button id="show-scroll">Show <code>scrollY</code></button>
+    </section>
+
+    <section>
+      <h2>Navigation Utilities</h2>
+      <p>History length: <span id="history-length">N/A</span></p>
+      <p>Current URL: <span id="location-href">N/A</span></p>
+      <button id="reload-page">Reload (location.reload)</button>
+      <button id="push-state">Push new state to history</button>
+      <pre id="fetch-result"></pre>
+    </section>
+
+    <section>
+      <h2>Timing Utilities</h2>
+      <p>Timer: <span id="timer-count">0</span></p>
+      <button id="start-interval">Start Interval</button>
+      <button id="stop-interval">Stop Interval</button>
+      <button id="timeout-button">Run Timeout (2s)</button>
+    </section>
+
+    <section>
+      <h2>DOM & Other APIs</h2>
+      <p><button id="doc-title">Show <code>document.title</code></button></p>
+      <p><button id="perf-now">Show <code>performance.now()</code></button></p>
+      <p><button id="crypto-random">Random from <code>crypto.getRandomValues</code></button></p>
+      <p><button id="raf-demo">Animate with <code>requestAnimationFrame</code></button></p>
+      <div id="raf-box" style="width:50px;height:50px;background:tomato;position:relative;"></div>
+      <p><button id="style-demo">Get Computed Style</button></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus, mauris at vehicula sagittis, nunc lorem vestibulum quam, nec pharetra purus nisi quis elit. Morbi eget fermentum justo. Phasellus eu sodales mi. Mauris sollicitudin eleifend condimentum. Nam euismod libero nec odio viverra, ut venenatis leo malesuada. Pellentesque a vulputate nisl, et feugiat justo. Suspendisse potenti. Ut feugiat ultricies eros, nec pulvinar ligula luctus in. Nullam cursus vulputate justo in feugiat.</p>
+      <p><button id="selection-demo">Get Selection</button></p>
+    </section>
+
+    <section>
+      <h2>DOM Traversal</h2>
+      <div class="traversal-element" id="traversal-parent">
+        Parent
+        <span class="traversal-element" id="traversal-child-1">Child 1</span>
+        <b class="traversal-element" id="traversal-child-2">Child 2</b>
+      </div>
+      <p>
+        <button id="first-child"><code>firstChild</code> of parent</button>
+        <button id="first-element-child"><code>firstElementChild</code> of parent</button>
+        <button id="parent-element"><code>parentElement</code> of Child 1</button>
+        <button id="next-element-sibling"><code>nextElementSibling</code> of Child 1</button>
+        <button id="contains-test">Parent <code>contains()</code> Child 1</button>
+      </p>
+      <p>Result: <span id="traversal-result">N/A</span></p>
+    </section>
+
+    <section>
+      <h2>Attributes</h2>
+      <p id="attr-target" data-demo="123">Element with <code>data-demo</code> attribute</p>
+      <button id="show-attrs">Show attributes</button>
+      <button id="get-attr">Get attribute <code>data-demo</code></button>
+      <button id="set-attr">Set attribute <code>data-demo</code></button>
+      <button id="has-attr">Has attribute <code>data-demo</code></button>
+      <button id="remove-attr">Remove attribute <code>data-demo</code></button>
+      <p>Result: <span id="attr-result">N/A</span></p>
+    </section>
+
+    <section>
+      <h2>HTML Element Methods</h2>
+      <button id="example-alert">Example alert button</button>
+      <button id="click-input">click() example alert</button>
+      <br />
+      <input id="html-input" type="text" placeholder="Blue outline when focused!" />
+      <button id="focus-input">focus() input</button>
+      <button id="blur-input">blur() input after 2 seconds</button>
+    </section>
+  </body>
+</html>
